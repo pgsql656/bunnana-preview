@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BunNaNa: Hot steamed buns, Reutlingen</title>
+<meta name="description" content="Handgefaltete philippinische Dampfbrötchen (Siopao), Siomai, Halo-Halo und ein täglich wechselnder Mittagstisch am Albtorplatz 6, Reutlingen. Mo–Do 11:00–18:30, Fr–Sa 11:00–19:00.">
+<meta name="theme-color" content="#fbbd11">
+<link rel="icon" href="assets/img/logo-600.jpg">
+<link rel="preload" href="assets/fonts/caprasimo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<script>
+document.documentElement.classList.add('js');
+/* Apply the saved language before first paint so EN visitors never see a German flash. */
+try { if (localStorage.getItem('bn-lang') === 'en') document.documentElement.lang = 'en'; } catch (e) {}
+</script>
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* preview-only banner */
+.preview-bar { background: var(--fiesta-ink); color: var(--fiesta-cream); border-bottom: 3px solid var(--fiesta-ink); font-family: var(--font-body); }
+.preview-bar-inner { max-width: 1240px; margin-inline: auto; padding: 14px var(--gutter) 16px; display: grid; gap: 8px; }
+.preview-tag { justify-self: start; background: var(--fiesta-yellow); color: var(--fiesta-ink); border-radius: 999px; padding: 4px 12px; font-size: 11.5px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.preview-bar p { margin: 0; font-size: 14.5px; line-height: 1.5; max-width: 80ch; }
+.preview-bar summary { cursor: pointer; font-weight: 800; font-size: 14px; color: var(--fiesta-yellow); padding: 4px 0; }
+.preview-bar ol { margin: 8px 0 0; padding-left: 22px; font-size: 14px; line-height: 1.5; max-width: 80ch; display: grid; gap: 6px; }
+.preview-bar strong { color: #fff; }
+</style>
+</head>
+<body>
+<div class="preview-bar" role="note">
+  <div class="preview-bar-inner">
+    <span class="preview-tag">Vorschau</span>
+    <p><strong>Entwurf der neuen bunnana.de, Stand 12. Oktober 2026.</strong> Diese Seite ist noch nicht öffentlich und wird von Suchmaschinen nicht gefunden. Bitte alles prüfen: Preise, Öffnungszeiten, Texte, Fotos.</p>
+  </div>
+</div>
+
+<div class="page">
+  <a class="skip-link" href="#inhalt"><span data-lang="de" lang="de">Zum Inhalt springen</span><span data-lang="en" lang="en">Skip to content</span></a>
+  <header class="site-header">
+    <nav class="container topbar" aria-label="Hauptnavigation" data-aria-de="Hauptnavigation" data-aria-en="Main navigation">
+      <a class="nav-logo" href="#top" aria-label="BunNaNa, zum Seitenanfang" data-aria-de="BunNaNa, zum Seitenanfang" data-aria-en="BunNaNa, back to top">
+        <img src="assets/img/logo-600.jpg" srcset="assets/img/logo-600-160.webp 160w" sizes="58px" alt="" width="600" height="600">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links"><span data-lang="de" lang="de">Inhalt</span><span data-lang="en" lang="en">Contents</span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="#menu"><span data-lang="de" lang="de">Speisekarte</span><span data-lang="en" lang="en">Menu</span></a>
+        <a href="#mittagstisch"><span data-lang="de" lang="de">Mittagstisch</span><span data-lang="en" lang="en">Lunch</span></a>
+        <a href="#catering">Catering</a>
+        <a href="#finden"><span data-lang="de" lang="de">Finden</span><span data-lang="en" lang="en">Find us</span></a>
+      </div>
+      <div class="lang" role="group" aria-label="Sprache / Language">
+        <button type="button" data-langbtn="de" aria-pressed="true" lang="de">DE</button>
+        <button type="button" data-langbtn="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <a class="btn btn-ink btn-sm sh-cream sh-3" href="tel:+4971211362690"><span data-lang="de" lang="de">Anrufen</span><span data-lang="en" lang="en">Call</span></a>
+    </nav>
+  </header>
+  <svg class="bunting" width="100%" height="46" aria-hidden="true">
+    <defs>
+      <pattern id="bn-banderitas" x="0" y="0" width="192" height="46" patternUnits="userSpaceOnUse">
+        <path d="M6,5 L38,5 L22,40 Z" fill="#f87070" stroke="#101828" stroke-width="2"></path>
+        <path d="M54,5 L86,5 L70,40 Z" fill="#fdf3e3" stroke="#101828" stroke-width="2"></path>
+        <path d="M102,5 L134,5 L118,40 Z" fill="#48a080" stroke="#101828" stroke-width="2"></path>
+        <path d="M150,5 L182,5 L166,40 Z" fill="#7a5bbf" stroke="#101828" stroke-width="2"></path>
+      </pattern>
+      <!-- Same bunting for the green lunch panel: the green flag would vanish
+           on green, so that one flag is cut from yellow instead. -->
+      <pattern id="bn-banderitas-lunch" x="0" y="0" width="192" height="46" patternUnits="userSpaceOnUse">
+        <path d="M6,5 L38,5 L22,40 Z" fill="#f87070" stroke="#101828" stroke-width="2"></path>
+        <path d="M54,5 L86,5 L70,40 Z" fill="#fdf3e3" stroke="#101828" stroke-width="2"></path>
+        <path d="M102,5 L134,5 L118,40 Z" fill="#fbbd11" stroke="#101828" stroke-width="2"></path>
+        <path d="M150,5 L182,5 L166,40 Z" fill="#7a5bbf" stroke="#101828" stroke-width="2"></path>
+      </pattern>
+    </defs>
+    <line x1="0" y1="4" x2="100%" y2="4" stroke="#101828" stroke-width="2.5"></line>
+    <rect width="100%" height="46" fill="url(#bn-banderitas)"></rect>
+  </svg>
+  <main id="inhalt">
+  <section id="top" class="container hero">
+    <div class="hero-col">
+      <a class="pill-addr" href="https://maps.google.com/?q=Albtorplatz+6,+72764+Reutlingen" target="_blank" rel="noopener" aria-label="Albtorplatz 6, Reutlingen: Route in Google Maps öffnen" data-aria-de="Albtorplatz 6, Reutlingen: Route in Google Maps öffnen" data-aria-en="Albtorplatz 6, Reutlingen: open directions in Google Maps">Albtorplatz 6 · Reutlingen<span class="pill-addr-go" aria-hidden="true">→</span></a>
+      <h1 class="hero-title">Mabuhay!</h1>
+      <p class="hero-lead">
+        <span data-lang="de" lang="de">Hot steamed buns, von Hand gefaltet.</span><span data-lang="en" lang="en">Hot steamed buns, folded by hand.</span>
+      </p>
+      <p class="open-status" id="bn-open" data-state="static">
+        <span class="open-dot" aria-hidden="true"></span>
+        <span class="open-text">
+          <span data-lang="de" lang="de">Mo–Do 11:00–18:30 · Fr–Sa 11:00–19:00 · So geschlossen</span><span data-lang="en" lang="en">Mon–Thu 11:00–18:30 · Fri–Sat 11:00–19:00 · Sun closed</span>
+        </span>
+      </p>
+      <p class="open-note" id="bn-notice-hero" hidden></p>
+      <p class="hero-copy">
+        <span data-lang="de" lang="de">Mabuhay ist ein philippinischer Gruß und bedeutet „Willkommen“. Fluffige Dampfbrötchen (auf den Philippinen Siopao, in China Baozi) mit Füllungen wie Adobo, Asado oder Ube, dazu ein täglich wechselnder Mittagstisch. Wie ein Straßenfest, mitten in Reutlingen.</span>
+        <span data-lang="en" lang="en">Mabuhay is a Filipino greeting: welcome. Pillowy steamed buns (Siopao in the Philippines, Baozi in China) with fillings like adobo, asado or ube, plus a lunch dish that changes every day. Like a street fiesta, in the middle of Reutlingen.</span>
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-ink sh-cream" href="#menu"><span data-lang="de" lang="de">Speisekarte ansehen</span><span data-lang="en" lang="en">See the menu</span></a>
+        <a class="btn btn-cream" href="#bestellen"><span data-lang="de" lang="de">Vorbestellen &amp; abholen</span><span data-lang="en" lang="en">Call ahead &amp; pick up</span></a>
+      </div>
+      <p class="hero-meta">
+        <span data-lang="de" lang="de">Buns ab 2,80 € · vegan und vegetarisch immer dabei.</span><span data-lang="en" lang="en">Buns from 2,80 € · vegan and vegetarian always on the board.</span>
+      </p>
+    </div>
+    <div class="frame hero-photo" style="--bg:var(--fiesta-coral);--tilt:3deg;--inset:-12px;--rad:26px;--img-rad:22px">
+      <div class="frame-bg"></div>
+      <div class="steam" aria-hidden="true"><span></span><span></span><span></span></div>
+      <img src="assets/img/beef-asado-bun-mit-ei.jpg" srcset="assets/img/beef-asado-bun-mit-ei-480.webp 480w, assets/img/beef-asado-bun-mit-ei-800.webp 800w, assets/img/beef-asado-bun-mit-ei-1200.webp 1200w" sizes="(max-width: 900px) calc(100vw - 48px), (max-width: 1296px) 45vw, 560px" alt="Pulled Beef Asado Bun, halbiert" data-alt-de="Pulled Beef Asado Bun, halbiert" data-alt-en="Pulled beef asado bun, halved" width="1400" height="1050" fetchpriority="high">
+      <div class="starburst" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <g stroke="#101828" stroke-width="2.5" fill="#fdf3e3">
+            <path d="M60 6 L67 32 L53 32 Z"></path><path d="M60 114 L67 88 L53 88 Z"></path><path d="M6 60 L32 53 L32 67 Z"></path><path d="M114 60 L88 53 L88 67 Z"></path>
+            <path d="M22 22 L44 38 L36 46 Z"></path><path d="M98 22 L76 38 L84 46 Z"></path><path d="M22 98 L44 82 L36 74 Z"></path><path d="M98 98 L76 82 L84 74 Z"></path>
+            <circle cx="60" cy="60" r="30" fill="#fbbd11"></circle>
+          </g>
+          <text x="60" y="57" text-anchor="middle" font-size="14">100%</text>
+          <text x="60" y="72" text-anchor="middle" font-size="13">Pinoy</text>
+        </svg>
+      </div>
+      <div class="sticker-fresh">
+        <span data-lang="de" lang="de">täglich frisch gedampft</span><span data-lang="en" lang="en">steamed fresh daily</span>
+      </div>
+    </div>
+  </section>
+  <div class="marquee" role="marquee" aria-label="Siopao, Siomai, Pork Adobo, Pulled Beef Asado, Halo-Halo, Mittagstisch" data-aria-de="Siopao, Siomai, Pork Adobo, Pulled Beef Asado, Halo-Halo, Mittagstisch" data-aria-en="Siopao, Siomai, Pork Adobo, Pulled Beef Asado, Halo-Halo, lunch dish">
+    <div class="marquee-track">
+      <span class="marquee-run"><span class="marquee-item"><span>SIOPAO</span><span class="star-coral">★</span></span><span class="marquee-item"><span>SIOMAI</span><span class="star-green">★</span></span><span class="marquee-item"><span>PORK ADOBO</span><span class="star-purple">★</span></span><span class="marquee-item"><span>PULLED BEEF ASADO</span><span class="star-coral">★</span></span><span class="marquee-item"><span>HALO-HALO</span><span class="star-green">★</span></span><span class="marquee-item"><span><span data-lang="de" lang="de">MITTAGSTISCH</span><span data-lang="en" lang="en">LUNCH</span></span><span class="star-purple">★</span></span></span>
+      <span class="marquee-run" aria-hidden="true"><span class="marquee-item"><span>SIOPAO</span><span class="star-coral">★</span></span><span class="marquee-item"><span>SIOMAI</span><span class="star-green">★</span></span><span class="marquee-item"><span>PORK ADOBO</span><span class="star-purple">★</span></span><span class="marquee-item"><span>PULLED BEEF ASADO</span><span class="star-coral">★</span></span><span class="marquee-item"><span>HALO-HALO</span><span class="star-green">★</span></span><span class="marquee-item"><span><span data-lang="de" lang="de">MITTAGSTISCH</span><span data-lang="en" lang="en">LUNCH</span></span><span class="star-purple">★</span></span></span>
+    </div>
+  </div>
+  <section id="bestellen" class="container order-block" aria-labelledby="bestellen-h">
+    <h2 id="bestellen-h" class="order-label"><span data-lang="de" lang="de">Vorbestellen &amp; abholen</span><span data-lang="en" lang="en">Call ahead &amp; pick up</span></h2>
+    <div class="order-row">
+      <a class="btn btn-ink btn-md sh-cream" href="tel:+4971211362690">07121 / 1362690</a>
+    </div>
+    <p class="order-note"><span data-lang="de" lang="de">Abholung am Albtorplatz 6 · Lieferung: bald</span><span data-lang="en" lang="en">Pick-up at Albtorplatz 6 · Delivery: coming soon</span></p>
+  </section>
+  <section id="mittagstisch" class="container">
+    <div class="lunch" data-reveal>
+      <svg width="100%" height="40" style="display:block" aria-hidden="true">
+        <line x1="0" y1="3" x2="100%" y2="3" stroke="#101828" stroke-width="2.5"></line>
+        <rect width="100%" height="40" fill="url(#bn-banderitas-lunch)" transform="scale(1,.85)"></rect>
+      </svg>
+      <div class="lunch-inner">
+        <div>
+          <span class="sticker" style="--tilt:-1.5deg"><span data-lang="de" lang="de">Mittagstisch 11,50 €</span><span data-lang="en" lang="en">Lunch dish 11,50 €</span></span>
+          <h2 class="h2 h2-lg"><span data-lang="de" lang="de">Jeden Tag ein anderes Gericht, frisch gekocht.</span><span data-lang="en" lang="en">A different dish every day, freshly cooked.</span></h2>
+          <!-- OWNER: price and sides taken from the menu on bunnana.de (uploaded 12.08.2026); please confirm. -->
+          <p class="lede"><span data-lang="de" lang="de">Zum Beispiel Pastil: Reis im Bananenblatt, mit Beef, Pork Adobo oder Chicken, vegan mit rauchigem Jackfruit-BBQ. Dazu Kimchi oder Salat mit Calamansi-Sesam-Dressing, mild oder mit Crispy Chili Oil. Alles aus der traditionellen philippinischen Küche.</span><span data-lang="en" lang="en">For example pastil: rice wrapped in a banana leaf, with beef, pork adobo or chicken, or vegan with smoky jackfruit BBQ. With kimchi or a salad with calamansi-sesame dressing on the side, mild or with crispy chili oil. All from traditional Filipino cooking.</span></p>
+          <p class="lede lunch-today"><span data-lang="de" lang="de">Das Gericht wechselt täglich, deshalb steht es nicht hier: Was heute im Topf ist, steht ab 11:00 auf der Tafel vor dem Laden und auf TikTok und Instagram.</span><span data-lang="en" lang="en">The dish changes every day, so it is not listed here: what is in the pot today goes on the board outside from 11:00, and on TikTok and Instagram.</span></p>
+          <div class="lunch-actions">
+            <a class="btn btn-yellow btn-md" href="https://www.tiktok.com/@bunnana_rt" target="_blank" rel="noopener">TikTok @bunnana_rt</a>
+            <a class="btn btn-white btn-md" href="tel:+4971211362690"><span data-lang="de" lang="de">07121 / 1362690 anrufen</span><span data-lang="en" lang="en">Call 07121 / 1362690</span></a>
+          </div>
+        </div>
+        <div class="lunch-board">
+          <img src="assets/img/unsere-tafel-vor-dem-laden.jpg" srcset="assets/img/unsere-tafel-vor-dem-laden-480.webp 480w, assets/img/unsere-tafel-vor-dem-laden-800.webp 800w, assets/img/unsere-tafel-vor-dem-laden-1200.webp 1200w" sizes="(max-width: 900px) calc(100vw - 48px), (max-width: 1296px) 45vw, 560px" alt="Kreidetafel im Laden mit Ube Matcha, Filipino Fruit Salad und Biko" data-alt-de="Kreidetafel im Laden mit Ube Matcha, Filipino Fruit Salad und Biko" data-alt-en="Chalkboard in the shop listing ube matcha, Filipino fruit salad and biko" width="1400" height="1867" loading="lazy" decoding="async">
+          <span class="float-sticker" style="--tilt:-4deg"><span data-lang="de" lang="de">Getränke &amp; Süßes</span><span data-lang="en" lang="en">drinks &amp; sweets</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="band-cream band-menu">
+  <section id="menu" class="container section">
+    <div data-reveal>
+      <span class="sticker" style="--tilt:-1.5deg"><span data-lang="de" lang="de">Deftig 4,50 € · Süß 2,80 €</span><span data-lang="en" lang="en">Savoury 4,50 € · Sweet 2,80 €</span></span>
+      <h2 class="h2 h2-xl"><span data-lang="de" lang="de">Sechs Falten, eine Füllung, elf Minuten Dampf.</span><span data-lang="en" lang="en">Six folds, one filling, eleven minutes of steam.</span></h2>
+      <p class="lede"><span data-lang="de" lang="de">Jeder Bun wird bei uns von Hand gefaltet. Die Füllungen stammen aus der traditionellen philippinischen Küche, mit Einflüssen aus anderen asiatischen Ländern.</span><span data-lang="en" lang="en">Every bun is folded by hand here. The fillings come from traditional Filipino cooking, with influences from across Asia.</span></p>
+    </div>
+    <div class="menu-grid">
+      <article class="menu-card" data-reveal style="--r:-.8deg;--d:.05s">
+        <img src="assets/img/beef-asado-bun-mit-ei.jpg" srcset="assets/img/beef-asado-bun-mit-ei-480.webp 480w, assets/img/beef-asado-bun-mit-ei-800.webp 800w, assets/img/beef-asado-bun-mit-ei-1200.webp 1200w" sizes="(max-width: 720px) 76vw, (max-width: 900px) 50vw, 290px" alt="Pulled Beef Asado Bun, halbiert" data-alt-de="Pulled Beef Asado Bun, halbiert" data-alt-en="Pulled beef asado bun, halved" width="1400" height="1050" loading="lazy" decoding="async">
+        <div class="menu-card-body">
+          <span class="sticker sticker-cat">Siopao</span>
+          <h3>Pulled Beef Asado Bun</h3>
+          <p><span data-lang="de" lang="de">Philippinisches Asado Pulled Beef mit Karotte und Ei.</span><span data-lang="en" lang="en">Filipino asado pulled beef with carrot and egg.</span></p>
+        </div>
+      </article>
+      <article class="menu-card" data-reveal style="--r:.7deg;--d:.12s">
+        <img src="assets/img/adobo-bun-halbiert.jpg" srcset="assets/img/adobo-bun-halbiert-480.webp 480w, assets/img/adobo-bun-halbiert-800.webp 800w, assets/img/adobo-bun-halbiert-1200.webp 1200w" sizes="(max-width: 720px) 76vw, (max-width: 900px) 50vw, 290px" alt="Pork Adobo Bun, halbiert" data-alt-de="Pork Adobo Bun, halbiert" data-alt-en="Pork adobo bun, halved" width="1400" height="1050" loading="lazy" decoding="async">
+        <div class="menu-card-body">
+          <span class="sticker sticker-cat">Siopao</span>
+          <h3>Pork Adobo Bun</h3>
+          <p><span data-lang="de" lang="de">Schweinefleisch, gegart in Sojasauce, Essig und Lorbeerblatt.</span><span data-lang="en" lang="en">Pork braised in soy sauce, vinegar and bay leaf.</span></p>
+        </div>
+      </article>
+      <article class="menu-card" data-reveal style="--r:-.5deg;--d:.19s">
+        <img src="assets/img/siomai-mit-chili-ol-2.jpg" srcset="assets/img/siomai-mit-chili-ol-2-480.webp 480w, assets/img/siomai-mit-chili-ol-2-800.webp 800w, assets/img/siomai-mit-chili-ol-2-1200.webp 1200w" sizes="(max-width: 720px) 76vw, (max-width: 900px) 50vw, 290px" alt="Siomai mit Chili-Öl" data-alt-de="Siomai mit Chili-Öl" data-alt-en="Siomai with chilli oil" width="1400" height="1050" loading="lazy" decoding="async">
+        <div class="menu-card-body">
+          <span class="sticker sticker-cat sticker-green">Dumplings</span>
+          <h3>Siomai</h3>
+          <p><span data-lang="de" lang="de">Drei kleine Dumplings mit Garnelen und Schweinehack, verfeinert mit zweierlei Soßen.</span><span data-lang="en" lang="en">Three small dumplings filled with shrimp and minced pork, finished with two sauces.</span></p>
+        </div>
+      </article>
+      <article class="menu-card" data-reveal style="--r:.6deg;--d:.26s">
+        <img src="assets/img/halo-halo-im-glas.jpg" srcset="assets/img/halo-halo-im-glas-480.webp 480w, assets/img/halo-halo-im-glas-800.webp 800w, assets/img/halo-halo-im-glas-1000.webp 1000w" sizes="(max-width: 720px) 76vw, (max-width: 900px) 50vw, 290px" alt="Halo-Halo im Glas" data-alt-de="Halo-Halo im Glas" data-alt-en="Halo-halo in a glass" width="1054" height="790" loading="lazy" decoding="async">
+        <div class="menu-card-body">
+          <span class="sticker sticker-cat sticker-coral">Dessert</span>
+          <h3>Halo-Halo</h3>
+          <p><span data-lang="de" lang="de">Crushed Ice, süße Bohnen, Geleewürfel, fruchtige Toppings und eine Kugel Ube-Eis.</span><span data-lang="en" lang="en">Crushed ice, sweet beans, jelly cubes, fruit toppings and a scoop of ube ice cream.</span></p>
+        </div>
+      </article>
+    </div>
+    <div class="price-grid" data-reveal>
+      <div class="price-card">
+        <div class="price-head">
+          <h3><span data-lang="de" lang="de">Deftige Buns</span><span data-lang="en" lang="en">Savoury buns</span></h3>
+          <span class="price">4,50 €</span>
+        </div>
+        <ul class="price-list" role="list" style="list-style:none;padding:0;margin:18px 0 0">
+          <li><div class="price-name">Beef</div><div class="price-desc"><span data-lang="de" lang="de">Pulled Beef Asado mit Karotte und Ei</span><span data-lang="en" lang="en">Asado pulled beef with carrot and egg</span></div></li>
+          <li><div class="price-name">Pork</div><div class="price-desc"><span data-lang="de" lang="de">Schweinefleisch gegart in Sojasauce, Essig und Lorbeerblatt</span><span data-lang="en" lang="en">Pork braised in soy sauce, vinegar and bay leaf</span></div></li>
+          <li><div class="price-name">Curry <span class="badge badge-vegan">VEGAN</span></div><div class="price-desc"><span data-lang="de" lang="de">Japanisches Curry mit roten Linsen und Süßkartoffeln</span><span data-lang="en" lang="en">Japanese curry with red lentils and sweet potato</span></div></li>
+          <li><div class="price-name">Eggplant <span class="badge badge-veg">VEGETARISCH</span></div><div class="price-desc"><span data-lang="de" lang="de">Gebratene Aubergine mit Ei und Sojasauce</span><span data-lang="en" lang="en">Fried aubergine with egg and soy sauce</span></div></li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <div class="price-head">
+          <h3><span data-lang="de" lang="de">Süße Buns</span><span data-lang="en" lang="en">Sweet buns</span></h3>
+          <span class="price">2,80 €</span>
+        </div>
+        <ul class="price-list" role="list" style="list-style:none;padding:0;margin:18px 0 0">
+          <li><div class="price-name">Schoko-Nougat</div><div class="price-desc"><span data-lang="de" lang="de">Mit einem geschmolzenen Schokoladenkern</span><span data-lang="en" lang="en">With a molten chocolate centre</span></div></li>
+          <li><div class="price-name">Ube <span class="badge badge-vegan">VEGAN</span></div><div class="price-desc"><span data-lang="de" lang="de">Lila Yamwurzel mit Kokosnussmilch</span><span data-lang="en" lang="en">Purple yam with coconut milk</span></div></li>
+          <li><div class="price-name">Anko <span class="badge badge-vegan">VEGAN</span></div><div class="price-desc"><span data-lang="de" lang="de">Japanische rote Bohnenpaste</span><span data-lang="en" lang="en">Japanese red bean paste</span></div></li>
+          <li><div class="price-name">Yema</div><div class="price-desc"><span data-lang="de" lang="de">Philippinische Milchcreme</span><span data-lang="en" lang="en">Filipino milk custard</span></div></li>
+        </ul>
+      </div>
+      <div class="price-card combos">
+        <!-- OWNER: replaces the four "Menüs" (6,90 to 16,10 €), which are not on the menu on bunnana.de (uploaded 12.08.2026); please confirm. -->
+        <div class="price-head">
+          <h3><span data-lang="de" lang="de">Siomai, Boxen, Dessert</span><span data-lang="en" lang="en">Siomai, boxes, dessert</span></h3>
+          <span class="price-sub"><span data-lang="de" lang="de">alles auch to go</span><span data-lang="en" lang="en">everything to go, too</span></span>
+        </div>
+        <ul class="combo-list" role="list">
+          <li><div class="price-name">Siomai</div><div class="price-desc"><span data-lang="de" lang="de">3 kleine Dumplings mit Garnelen und Schweinehack</span><span data-lang="en" lang="en">3 small dumplings with shrimp and minced pork</span></div><div class="combo-price">4,50 €</div></li>
+          <li><div class="price-name"><span data-lang="de" lang="de">3er Box deftig</span><span data-lang="en" lang="en">Box of 3, savoury</span></div><div class="price-desc"><span data-lang="de" lang="de">Auswahl von drei deftigen Buns</span><span data-lang="en" lang="en">Your choice of three savoury buns</span></div><div class="combo-price">12,90 €</div></li>
+          <li><div class="price-name"><span data-lang="de" lang="de">4er Box süß</span><span data-lang="en" lang="en">Box of 4, sweet</span></div><div class="price-desc"><span data-lang="de" lang="de">Auswahl von vier süßen Buns</span><span data-lang="en" lang="en">Your choice of four sweet buns</span></div><div class="combo-price">10,60 €</div></li>
+          <li><div class="price-name">Halo-Halo</div><div class="price-desc"><span data-lang="de" lang="de">Crushed Ice, süße Bohnen, Geleewürfel, Früchte, Ube-Eis</span><span data-lang="en" lang="en">Crushed ice, sweet beans, jelly cubes, fruit, ube ice cream</span></div><div class="combo-price">10,00 €</div></li>
+        </ul>
+      </div>
+    </div>
+    <p class="menu-note"><span data-lang="de" lang="de">Außerdem auf der Karte: Pancit-Bihon-Suppe (vegan), Siomai-Suppe, Pancit Guisado, Biko (Klebreis in Kokosmilch), Mango Tapioca Cream, Ube Matcha und Calamansi-Limonade. Frag einfach im Laden nach. Buns lassen sich einfrieren und zuhause kurz dämpfen.</span><span data-lang="en" lang="en">Also on the menu: pancit bihon soup (vegan), siomai soup, pancit guisado, biko (sticky rice in coconut milk), mango tapioca cream, ube matcha and calamansi lemonade. Just ask in the shop. Buns freeze well; steam them briefly at home.</span></p>
+  </section>
+  </div>
+  <section class="container section">
+    <div class="story" data-reveal>
+      <div class="frame" style="--bg:var(--fiesta-purple);--tilt:-2.5deg;--inset:-10px;--rad:22px">
+        <div class="frame-bg"></div>
+        <img src="assets/img/siomai-im-papierschalchen-mit-chili-ol.jpg" srcset="assets/img/siomai-im-papierschalchen-mit-chili-ol-480.webp 480w, assets/img/siomai-im-papierschalchen-mit-chili-ol-800.webp 800w, assets/img/siomai-im-papierschalchen-mit-chili-ol-1200.webp 1200w" sizes="(max-width: 900px) calc(100vw - 48px), (max-width: 1296px) 45vw, 560px" alt="Siomai im Papierschälchen mit Chili-Öl" data-alt-de="Siomai im Papierschälchen mit Chili-Öl" data-alt-en="Siomai in a paper tray with chilli oil" width="1400" height="1050" loading="lazy" decoding="async">
+        <div class="float-sticker" style="--tilt:-3deg;left:-18px;bottom:-18px">
+          <span data-lang="de" lang="de">von Hand geformt</span><span data-lang="en" lang="en">shaped by hand</span>
+        </div>
+      </div>
+      <div>
+        <span class="sticker" style="--tilt:1deg"><span data-lang="de" lang="de">Früher eine Metzgerei</span><span data-lang="en" lang="en">Once a butcher's shop</span></span>
+        <h2 class="h2 h2-lg"><span data-lang="de" lang="de">Vom Wochenmarkt an den Albtorplatz.</span><span data-lang="en" lang="en">From the weekly market to Albtorplatz.</span></h2>
+        <p class="lede"><span data-lang="de" lang="de">Angefangen haben wir mit einem Stand auf dem Reutlinger Wochenmarkt. Heute dämpfen wir in einem ehemaligen Metzgerladen am Albtorplatz: ein kleiner, lebendiger Ort mit Bambuskörben, Warmhalteboxen und einem Foodtruck, der auch zu dir kommt.</span><span data-lang="en" lang="en">We started with a stall on the Reutlingen weekly market. Today we steam in a former butcher's shop at Albtorplatz: a small, lively place with bamboo baskets, warming boxes and a foodtruck that comes to you.</span></p>
+        <p class="lede"><span data-lang="de" lang="de">Der Teig, die Falten, die Siomai: alles entsteht bei uns von Hand. Vegan und vegetarisch sind kein Extra, sondern Teil der Karte.</span><span data-lang="en" lang="en">The dough, the folds, the siomai: everything is made by hand here. Vegan and vegetarian are not an extra, they are part of the menu.</span></p>
+      </div>
+    </div>
+  </section>
+  <section id="catering" class="container">
+    <div class="catering on-ink" data-reveal>
+      <div class="catering-body">
+        <img class="catering-mark" src="assets/img/bunnana-logo-mark.png" srcset="assets/img/bunnana-logo-mark-400.webp 400w" sizes="(max-width: 720px) 120px, 160px" alt="" width="383" height="349" loading="lazy" decoding="async">
+        <h2 class="h2 h2-lg"><span data-lang="de" lang="de">Buns für die ganze Feier.</span><span data-lang="en" lang="en">Buns for the whole party.</span></h2>
+        <p class="lede"><span data-lang="de" lang="de">Sie holen Buns und Gerichte in Warmhalteboxen bei uns ab, oder unser Foodtruck kommt direkt zu Ihrer Veranstaltung. Die Buns sind handlich, brauchen kein Besteck und bleiben in der Box lange warm.</span><span data-lang="en" lang="en">Collect buns and dishes in warming boxes from the shop, or book the foodtruck to come to your event. The buns are hand-sized, need no cutlery and stay warm in the box for a long time.</span></p>
+        <p class="catering-terms">
+          <!-- OWNER: replace with real numbers when known, e.g. "Ab 20 Personen · ca. 12 € pro Person · Anfrage bitte 7 Tage vorher". -->
+          <span data-lang="de" lang="de">Preis auf Anfrage: Sie nennen uns Personenzahl und Datum, wir schicken ein Angebot.</span><span data-lang="en" lang="en">Price on request: tell us the headcount and date, and we send you a quote.</span>
+        </p>
+        <ul class="chips" role="list">
+          <li><a class="chip" href="#kontakt" data-anlass="Kindergeburtstag" style="--c:var(--fiesta-coral)"><span data-lang="de" lang="de">Kindergeburtstag</span><span data-lang="en" lang="en">Kids' birthdays</span><span class="chip-go" aria-hidden="true">→</span></a></li>
+          <li><a class="chip" href="#kontakt" data-anlass="Firmenfeier" style="--c:var(--fiesta-green-light);border-color:var(--fiesta-green)"><span data-lang="de" lang="de">Firmenfeier</span><span data-lang="en" lang="en">Company events</span><span class="chip-go" aria-hidden="true">→</span></a></li>
+          <li><a class="chip" href="#kontakt" data-format="foodtruck" style="--c:var(--fiesta-yellow)">Foodtruck<span class="chip-go" aria-hidden="true">→</span></a></li>
+          <li><a class="chip" href="#kontakt" data-format="boxen" style="--c:var(--fiesta-purple-light);border-color:var(--fiesta-purple)"><span data-lang="de" lang="de">Warmhalteboxen</span><span data-lang="en" lang="en">Warming boxes</span><span class="chip-go" aria-hidden="true">→</span></a></li>
+        </ul>
+        <a class="btn btn-yellow btn-catering sh-coral" href="#kontakt"><span data-lang="de" lang="de">Catering anfragen</span><span data-lang="en" lang="en">Request catering</span></a>
+      </div>
+      <img class="catering-photo" src="assets/img/siomai-im-bambuskorb-vor-der-bunnana-box.jpg" srcset="assets/img/siomai-im-bambuskorb-vor-der-bunnana-box-480.webp 480w, assets/img/siomai-im-bambuskorb-vor-der-bunnana-box-800.webp 800w, assets/img/siomai-im-bambuskorb-vor-der-bunnana-box-1200.webp 1200w" sizes="(max-width: 900px) calc(100vw - 48px), (max-width: 1296px) 45vw, 560px" alt="Siomai im Bambuskorb vor der BunNaNa-Box" data-alt-de="Siomai im Bambuskorb vor der BunNaNa-Box" data-alt-en="Siomai in a bamboo basket in front of the BunNaNa box" width="1400" height="1867" loading="lazy" decoding="async">
+    </div>
+  </section>
+  <section class="container section">
+    <div data-reveal>
+      <h2 class="h2 h2-md"><span data-lang="de" lang="de">Endlich ein festes Zuhause für die Buns.</span><span data-lang="en" lang="en">The buns finally have a permanent home.</span></h2>
+      <p class="rating">
+        <span class="rating-num">4,9</span>
+        <span class="rating-stars" aria-hidden="true">★★★★★</span>
+        <span class="rating-src"><span data-lang="de" lang="de">von 5, aus 35 Google-Bewertungen</span><span data-lang="en" lang="en">out of 5, from 35 Google reviews</span></span>
+      </p>
+    </div>
+    <div class="quotes">
+      <blockquote class="quote" data-reveal lang="de" style="--r:-.8deg;--d:.05s;--c:var(--fiesta-coral)">
+        <span class="quote-pin" aria-hidden="true"></span>
+        <div class="quote-mark" aria-hidden="true">“</div>
+        <p>Sehr schöner Laden mit authentischen philippinischen Gerichten. Wir sind mittlerweile Stammkunden und genießen jeden einzelnen Aufenthalt. Die Buns sind Mega lecker und muss jeder einmal probiert haben.</p>
+        <footer>Philip <span>· Google, 09/2025</span></footer>
+      </blockquote>
+      <blockquote class="quote" data-reveal lang="de" style="--r:.6deg;--d:.12s;--c:var(--fiesta-green)">
+        <span class="quote-pin" aria-hidden="true"></span>
+        <div class="quote-mark" aria-hidden="true">“</div>
+        <p>Das Essen ist der Wahnsinn! Umso schöner, dass es nun einen festen Laden gibt, in dem man zu jeder Zeit Buns nach belieben abholen kann. Sie sind sooooo lecker, dass ich nach meinem Umzug in eine 50km entfernte Stadt zu jeder Zeit dort Proviant mitnehme.</p>
+        <footer>Wiebke Kraft <span>· Google, 08/2025</span></footer>
+      </blockquote>
+      <blockquote class="quote" data-reveal lang="en" style="--r:-.5deg;--d:.19s;--c:var(--fiesta-purple)">
+        <span class="quote-pin" aria-hidden="true"></span>
+        <div class="quote-mark" aria-hidden="true">“</div>
+        <p>Really good calm atmosphere, delicious food (both regular menu and dish of the day) and warm-welcoming employees. Thank you so much for good experience and energy!</p>
+        <footer>Daria Simenko <span>· Google, 10/2025</span></footer>
+      </blockquote>
+    </div>
+  </section>
+  <section id="bn-tiktok" class="container section">
+    <div class="tiktok-head" data-reveal>
+      <h2 class="h2 h2-md"><span data-lang="de" lang="de">Der Dampf, aus der Nähe.</span><span data-lang="en" lang="en">The steam, up close.</span></h2>
+      <div class="social-actions">
+        <a class="btn btn-white btn-md" href="https://www.tiktok.com/@bunnana_rt" target="_blank" rel="noopener">TikTok @bunnana_rt</a>
+        <a class="btn btn-white btn-md" href="https://www.instagram.com/bun_na_na/" target="_blank" rel="noopener">Instagram @bun_na_na</a>
+      </div>
+    </div>
+    <div class="tiktok-grid">
+      <a class="tile" data-reveal style="--r:-.8deg;--d:.05s" href="https://www.tiktok.com/@bunnana_rt/video/7568229653194837270" target="_blank" rel="noopener">
+        <img src="assets/img/ganzer-bun-mit-rotem-punkt-auf-dem-holzteller.jpg" srcset="assets/img/ganzer-bun-mit-rotem-punkt-auf-dem-holzteller-480.webp 480w, assets/img/ganzer-bun-mit-rotem-punkt-auf-dem-holzteller-800.webp 800w, assets/img/ganzer-bun-mit-rotem-punkt-auf-dem-holzteller-1200.webp 1200w" sizes="(max-width: 720px) 72vw, (max-width: 900px) 33vw, 390px" alt="Ganzer Bun mit rotem Punkt auf dem Holzteller" data-alt-de="Ganzer Bun mit rotem Punkt auf dem Holzteller" data-alt-en="Whole bun with a red dot on a wooden plate" width="1400" height="1050" loading="lazy" decoding="async">
+        <span class="tile-cap"><span><span data-lang="de" lang="de">Noch nie einen gedämpften Bun gesehen?</span><span data-lang="en" lang="en">Never seen a steamed bun?</span></span><span class="tile-go" aria-hidden="true">▶ TikTok</span></span>
+      </a>
+      <a class="tile" data-reveal style="--r:.6deg;--d:.1s" href="https://www.tiktok.com/@bunnana_rt/video/7567848373626162454" target="_blank" rel="noopener">
+        <img src="assets/img/siomai-im-papierschalchen-mit-chili-ol.jpg" srcset="assets/img/siomai-im-papierschalchen-mit-chili-ol-480.webp 480w, assets/img/siomai-im-papierschalchen-mit-chili-ol-800.webp 800w, assets/img/siomai-im-papierschalchen-mit-chili-ol-1200.webp 1200w" sizes="(max-width: 720px) 72vw, (max-width: 900px) 33vw, 390px" alt="Siomai im Papierschälchen mit Chili-Öl" data-alt-de="Siomai im Papierschälchen mit Chili-Öl" data-alt-en="Siomai in a paper tray with chilli oil" width="1400" height="1050" loading="lazy" decoding="async">
+        <span class="tile-cap"><span><span data-lang="de" lang="de">Siomai, jedes Stück von Hand geformt</span><span data-lang="en" lang="en">Siomai, every piece shaped by hand</span></span><span class="tile-go" aria-hidden="true">▶ TikTok</span></span>
+      </a>
+      <a class="tile" data-reveal style="--r:-.4deg;--d:.15s" href="https://www.tiktok.com/@bunnana_rt/video/7584758574509837590" target="_blank" rel="noopener">
+        <img src="assets/img/funf-handgemachte-buns-in-einer-kraftbox.jpg" srcset="assets/img/funf-handgemachte-buns-in-einer-kraftbox-480.webp 480w, assets/img/funf-handgemachte-buns-in-einer-kraftbox-800.webp 800w, assets/img/funf-handgemachte-buns-in-einer-kraftbox-1200.webp 1200w" sizes="(max-width: 720px) 72vw, (max-width: 900px) 33vw, 390px" alt="Fünf handgemachte Buns in einer Kraftbox" data-alt-de="Fünf handgemachte Buns in einer Kraftbox" data-alt-en="Five handmade buns in a kraft box" width="1400" height="1050" loading="lazy" decoding="async">
+        <span class="tile-cap"><span><span data-lang="de" lang="de">Erste Reaktion auf den Beef Bun</span><span data-lang="en" lang="en">First bite of the beef bun</span></span><span class="tile-go" aria-hidden="true">▶ TikTok</span></span>
+      </a>
+    </div>
+  </section>
+  <section id="finden" class="container section">
+    <div class="finden" data-reveal>
+      <div>
+        <span class="sticker" style="--tilt:-1deg">Albtorplatz 6 · 72764 Reutlingen</span>
+        <h2 class="h2 h2-md" style="max-width:20ch"><span data-lang="de" lang="de">Mo bis Do <span class="nowrap">11:00–18:30</span>, Fr und Sa <span class="nowrap">bis 19:00</span>.</span><span data-lang="en" lang="en">Mon to Thu <span class="nowrap">11:00–18:30</span>, Fri and Sat <span class="nowrap">until 19:00</span>.</span></h2>
+        <p class="lede" style="max-width:44ch"><span data-lang="de" lang="de">Sonntags haben wir geschlossen. Der Eingang befindet sich direkt neben dem Bauzaun.</span><span data-lang="en" lang="en">Closed on Sundays. The entrance is right next to the construction fence.</span></p>
+        <div class="addr">
+          <a href="tel:+4971211362690">07121 / 1362690</a>
+          <a href="mailto:info@bunnana.de">info@bunnana.de</a>
+        </div>
+        <div class="order-row">
+          <a class="btn btn-ink btn-md btn-double" href="https://maps.google.com/?q=Albtorplatz+6,+72764+Reutlingen" target="_blank" rel="noopener"><span data-lang="de" lang="de">Route in Google Maps öffnen</span><span data-lang="en" lang="en">Open directions in Google Maps</span></a>
+        </div>
+      </div>
+      <div class="hours-card">
+        <p class="hours-note" id="bn-notice" hidden></p>
+        <table class="hours">
+          <caption class="visually-hidden"><span data-lang="de" lang="de">Öffnungszeiten</span><span data-lang="en" lang="en">Opening hours</span></caption>
+          <tbody>
+            <tr data-day="1"><th scope="row"><span data-lang="de" lang="de">Montag</span><span data-lang="en" lang="en">Monday</span></th><td>11:00 – 18:30</td></tr>
+            <tr data-day="2"><th scope="row"><span data-lang="de" lang="de">Dienstag</span><span data-lang="en" lang="en">Tuesday</span></th><td>11:00 – 18:30</td></tr>
+            <tr data-day="3"><th scope="row"><span data-lang="de" lang="de">Mittwoch</span><span data-lang="en" lang="en">Wednesday</span></th><td>11:00 – 18:30</td></tr>
+            <tr data-day="4"><th scope="row"><span data-lang="de" lang="de">Donnerstag</span><span data-lang="en" lang="en">Thursday</span></th><td>11:00 – 18:30</td></tr>
+            <tr data-day="5"><th scope="row"><span data-lang="de" lang="de">Freitag</span><span data-lang="en" lang="en">Friday</span></th><td>11:00 – 19:00</td></tr>
+            <tr data-day="6"><th scope="row"><span data-lang="de" lang="de">Samstag</span><span data-lang="en" lang="en">Saturday</span></th><td>11:00 – 19:00</td></tr>
+            <tr data-day="0" class="closed"><th scope="row"><span data-lang="de" lang="de">Sonntag</span><span data-lang="en" lang="en">Sunday</span></th><td><span data-lang="de" lang="de">geschlossen</span><span data-lang="en" lang="en">closed</span></td></tr>
+          </tbody>
+        </table>
+        <img class="entrance-photo" src="assets/img/eingang-neben-dem-bauzaun.jpg" srcset="assets/img/eingang-neben-dem-bauzaun-480.webp 480w, assets/img/eingang-neben-dem-bauzaun-800.webp 800w, assets/img/eingang-neben-dem-bauzaun-1024.webp 1024w" sizes="(max-width: 900px) calc(100vw - 88px), 520px" alt="Der Eingang von BunNaNa rechts neben dem gelben Bauzaun-Banner „hast du hunger?“" data-alt-de="Der Eingang von BunNaNa rechts neben dem gelben Bauzaun-Banner „hast du hunger?“" data-alt-en="The BunNaNa entrance to the right of the yellow fence banner reading “hast du hunger?”" width="1024" height="768" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+  <div class="band-cream band-contact">
+  <section id="kontakt" class="container section">
+    <div class="contact" data-reveal>
+      <div>
+        <h2 class="h2 h2-md" style="max-width:22ch"><span data-lang="de" lang="de">Erzählen Sie uns von Ihrem Anlass.</span><span data-lang="en" lang="en">Tell us about your occasion.</span></h2>
+        <p class="lede" style="max-width:46ch"><span data-lang="de" lang="de">Ob zehn Gäste im Garten oder Firmenfeier mit Buffet: Sagen Sie uns Personenzahl, Datum und ob Foodtruck oder Boxen, dann melden wir uns mit einem Angebot.</span><span data-lang="en" lang="en">Ten guests in the garden or a company party with a buffet: tell us the headcount, the date and whether you want the foodtruck or boxes, and we reply with a quote.</span></p>
+        <form id="bn-contact-form" class="form" action="mailto:info@bunnana.de" method="post" enctype="text/plain" novalidate>
+          <div class="field"><label for="bn-name">Name</label><input class="input" id="bn-name" name="name" type="text" autocomplete="name" required maxlength="120"></div>
+          <div class="field"><label for="bn-mail">E-Mail</label><input class="input" id="bn-mail" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="200" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"></div>
+          <div class="field"><label for="bn-tel"><span data-lang="de" lang="de">Telefon für Rückruf (optional)</span><span data-lang="en" lang="en">Phone for a call back (optional)</span></label><input class="input" id="bn-tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel" maxlength="40"></div>
+          <div class="field-row">
+            <div class="field"><label for="bn-guests"><span data-lang="de" lang="de">Personen</span><span data-lang="en" lang="en">Guests</span></label><input class="input" id="bn-guests" name="personen" type="number" inputmode="numeric" min="1" max="2000" step="1" required placeholder="z. B. 40" data-ph-de="z. B. 40" data-ph-en="e.g. 40"></div>
+            <div class="field"><label for="bn-date"><span data-lang="de" lang="de">Datum (falls bekannt)</span><span data-lang="en" lang="en">Date (if known)</span></label><input class="input" id="bn-date" name="datum" type="date"></div>
+          </div>
+          <fieldset class="field choice">
+            <legend><span data-lang="de" lang="de">Foodtruck oder Warmhalteboxen?</span><span data-lang="en" lang="en">Foodtruck or warming boxes?</span></legend>
+            <div class="choice-row">
+              <label class="choice-opt"><input type="radio" name="format" value="Foodtruck" data-format="foodtruck"><span>Foodtruck</span></label>
+              <label class="choice-opt"><input type="radio" name="format" value="Warmhalteboxen" data-format="boxen"><span><span data-lang="de" lang="de">Warmhalteboxen</span><span data-lang="en" lang="en">Warming boxes</span></span></label>
+              <label class="choice-opt"><input type="radio" name="format" value="noch offen" data-format="offen" checked><span><span data-lang="de" lang="de">Noch offen</span><span data-lang="en" lang="en">Not sure yet</span></span></label>
+            </div>
+          </fieldset>
+          <div class="field"><label for="bn-msg"><span data-lang="de" lang="de">Nachricht</span><span data-lang="en" lang="en">Message</span></label><textarea class="input" id="bn-msg" name="message" rows="4" required maxlength="2000"></textarea></div>
+          <p class="form-hint" id="bn-contact-hint"><span data-lang="de" lang="de">Der Button öffnet Ihr E-Mail-Programm mit der fertigen Anfrage. Oder schreiben Sie direkt an <a href="mailto:info@bunnana.de">info@bunnana.de</a>.</span><span data-lang="en" lang="en">The button opens your e-mail app with the request filled in. Or write directly to <a href="mailto:info@bunnana.de">info@bunnana.de</a>.</span></p>
+          <div class="form-actions">
+            <button class="btn btn-ink btn-md btn-double" type="submit"><span data-lang="de" lang="de">Anfrage per E-Mail senden</span><span data-lang="en" lang="en">Send request by e-mail</span></button>
+            <a class="btn btn-white btn-md" href="tel:+4971211362690"><span data-lang="de" lang="de">Lieber anrufen</span><span data-lang="en" lang="en">Call instead</span></a>
+          </div>
+          <span class="form-status" id="bn-sent-note" role="status" aria-live="polite"></span>
+        </form>
+      </div>
+      <!-- OWNER: the e-mail newsletter sign-up is gone until a real list exists; this panel points to the channels where the daily dish is posted. -->
+      <div class="newsletter">
+        <h3><span data-lang="de" lang="de">Jeden Tag Neues</span><span data-lang="en" lang="en">Something new every day</span></h3>
+        <p><span data-lang="de" lang="de">Das Tagesgericht und Neues aus dem Laden gibt es auf TikTok und Instagram.</span><span data-lang="en" lang="en">The dish of the day and news from the shop are on TikTok and Instagram.</span></p>
+        <div class="social-actions">
+          <a class="btn btn-ink btn-sm sh-cream sh-3" href="https://www.tiktok.com/@bunnana_rt" target="_blank" rel="noopener">TikTok @bunnana_rt</a>
+          <a class="btn btn-ink btn-sm sh-cream sh-3" href="https://www.instagram.com/bun_na_na/" target="_blank" rel="noopener">Instagram @bun_na_na</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  </main>
+  <nav class="thumb-bar" aria-label="Anrufen und Route" data-aria-de="Anrufen und Route" data-aria-en="Call and directions">
+    <a class="btn btn-ink btn-sm sh-cream sh-3" href="tel:+4971211362690"><span data-lang="de" lang="de">Anrufen</span><span data-lang="en" lang="en">Call</span></a>
+    <a class="btn btn-cream btn-sm sh-3" href="https://maps.google.com/?q=Albtorplatz+6,+72764+Reutlingen" target="_blank" rel="noopener"><span data-lang="de" lang="de">Route</span><span data-lang="en" lang="en">Directions</span></a>
+  </nav>
+  <svg class="bunting bunting-ink" width="100%" height="46" aria-hidden="true">
+    <line x1="0" y1="4" x2="100%" y2="4" stroke="#fdf3e3" stroke-width="2.5"></line>
+    <rect width="100%" height="46" fill="url(#bn-banderitas)"></rect>
+  </svg>
+  <footer class="site-footer on-ink">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo-600.jpg" srcset="assets/img/logo-600-160.webp 160w" sizes="76px" alt="BunNaNa" width="600" height="600" loading="lazy" decoding="async">
+        <p>BunNaNa, hot steamed buns.<br>Albtorplatz 6, 72764 Reutlingen<br><a href="tel:+4971211362690">07121 / 1362690</a><br><a href="mailto:info@bunnana.de">info@bunnana.de</a></p>
+      </div>
+      <nav class="footer-links" aria-label="Seiten" data-aria-de="Seiten" data-aria-en="Pages">
+        <a href="#menu"><span data-lang="de" lang="de">Speisekarte</span><span data-lang="en" lang="en">Menu</span></a>
+        <a href="#mittagstisch"><span data-lang="de" lang="de">Mittagstisch</span><span data-lang="en" lang="en">Lunch</span></a>
+        <a href="#catering">Catering</a>
+        <a href="#finden"><span data-lang="de" lang="de">Finden</span><span data-lang="en" lang="en">Find us</span></a>
+        <a href="#kontakt"><span data-lang="de" lang="de">Kontakt</span><span data-lang="en" lang="en">Contact</span></a>
+      </nav>
+      <nav class="footer-links" aria-label="Extern" data-aria-de="Extern" data-aria-en="External links">
+        <a class="hl" href="https://www.tiktok.com/@bunnana_rt" target="_blank" rel="noopener">TikTok</a>
+        <a class="hl" href="https://www.instagram.com/bun_na_na/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/p/Bunnana-100066254540165/" target="_blank" rel="noopener">Facebook</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<script src="js/site.js" defer></script>
+</body>
+</html>
